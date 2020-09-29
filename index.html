@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+      #code_panel, #output_panel
+      {
+        font-family: monospace;
+      }
+
+      .update_animation
+      {
+        animation-name: update_animation;
+        animation-duration: 1s;
+      }
+
+      @keyframes update_animation
+      {
+        from { background-color: red; }
+        to {}
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container-fluid p-5'>
+      <div class='row p-2'>
+        <div class='col'>
+          <textarea class='form-control my-3' type='text' placeholder='Brainfuck code' rows=20 id='code_panel'></textarea>
+          <input class='form-control my-3' type='text' placeholder='Input' id='input_panel'>
+          <input class='form-control my-3 btn btn-primary' type='button' value='run' id='run_button'>
+        </div>
+      </div>
+      <div class='row p-2'>
+        <div class='col text-right'>
+          <small class='font-italic'>Running time: <span class='font-weight-bold'><span id='running_time'>0</span>s</span></small>
+        </div>
+      </div>
+      <div class='row p-2'>
+        <div class='col'>
+            <textarea class='form-control' id='output_panel' placeholder='Output' readonly></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
